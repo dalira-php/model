@@ -15,5 +15,7 @@
       "php vendor/dalira-php/model/generate.php"
     ]
   },
-  "require": {}
+  "require": {},
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
