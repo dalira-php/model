@@ -43,7 +43,7 @@ class PostsFacade
     public function __construct(DBConnection \$db)
     {
         // Get the database connection from DBConnection class
-        $this->db = \$db->getConnection();
+        \$this->db = \$db->getConnection();
     }
 
     // Add your models below. Methods can be added to interact with posts data,
