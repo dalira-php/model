@@ -7,10 +7,10 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "php Generator.php"
+      "php vendor/dalira-php/model/Generator.php"
     ],
     "post-update-cmd": [
-      "php Generator.php"
+      "php vendor/dalira-php/model/Generator.php"
     ]
   }
 }
