@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/DBConnection.php';
+
 if ($argc < 2) {
     echo "Usage: php Generator.php ModelName\n";
     exit(1);
