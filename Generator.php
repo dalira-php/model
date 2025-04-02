@@ -14,14 +14,40 @@ namespace app\Models;
 
 use config\DBConnection;
 
-class {$modelName}
+/**
+ * Class PostsFacade
+ * 
+ * This class serves as a facade for handling the database interactions
+ * related to the 'Posts' model. It abstracts the complexity of database
+ * queries, providing a simple interface for managing posts.
+ * 
+ * @package app\Models
+ */
+class PostsFacade
 {
+    /**
+     * @var \PDO
+     * 
+     * The database connection instance.
+     */
     private \$db;
 
+    /**
+     * PostsFacade constructor.
+     *
+     * Initializes the database connection.
+     * 
+     * @param DBConnection \$db The DBConnection instance to be used for
+     * establishing the database connection.
+     */
     public function __construct(DBConnection \$db)
     {
-        \$this->db = \$db->getConnection();
+        // Get the database connection from DBConnection class
+        $this->db = \$db->getConnection();
     }
+
+    // Add your models below. Methods can be added to interact with posts data,
+    // such as creating, updating, deleting posts, etc.
 }
 PHP;
 
