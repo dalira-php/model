@@ -1,6 +1,7 @@
 {
     "name": "dalira-php/model",
     "description": "A custom model generator for Dalira PHP using Composer",
+    "license": "MIT",
     "autoload": {
       "psr-4": {
         "ModelFacade\\": "./"
