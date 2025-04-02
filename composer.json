@@ -12,10 +12,5 @@
     "post-update-cmd": [
       "php Generator.php"
     ]
-  },
-  "autoload": {
-    "psr-4": {
-      "DaliraPhp\\": "src/"
-    }
   }
 }
