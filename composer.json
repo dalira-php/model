@@ -4,13 +4,5 @@
   "type": "library",
   "require": {
     "php": "^7.4|^8.0"
-  },
-  "scripts": {
-    "post-install-cmd": [
-      "php vendor/dalira-php/model/Generator.php"
-    ],
-    "post-update-cmd": [
-      "php vendor/dalira-php/model/Generator.php"
-    ]
   }
 }
