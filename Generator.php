@@ -1,22 +1,13 @@
 <?php
 
-namespace DaliraPhp;
+if ($argc < 2) {
+    echo "Usage: php vendor/dalira-php/model/generate.php ModelName\n";
+    exit(1);
+}
 
-class Generator
-{
-    public static function generateModelFromInput()
-    {
-        global $argv;
+$modelName = ucfirst($argv[1]); // Get the model name from command argument
 
-        // Check if a model name was provided
-        if (!isset($argv[2])) {
-            echo "Usage: composer require dalira-php/model && php vendor/dalira-php/model/generate.php ModelName\n";
-            return;
-        }
-
-        $modelName = ucfirst($argv[2]); // Ensure first letter is uppercase
-
-        $modelContent = <<<PHP
+$modelContent = <<<PHP
 <?php
 
 namespace App\Models;
@@ -58,17 +49,15 @@ class {$modelName} extends DBConnection
 }
 PHP;
 
-        $path = getcwd() . '/app/Models/' . $modelName . '.php';
+$path = getcwd() . '/app/Models/' . $modelName . '.php';
 
-        if (!file_exists(dirname($path))) {
-            mkdir(dirname($path), 0777, true);
-        }
+if (!file_exists(dirname($path))) {
+    mkdir(dirname($path), 0777, true);
+}
 
-        if (!file_exists($path)) {
-            file_put_contents($path, $modelContent);
-            echo "{$modelName}.php created successfully in app/Models\n";
-        } else {
-            echo "{$modelName}.php already exists. Skipping...\n";
-        }
-    }
+if (!file_exists($path)) {
+    file_put_contents($path, $modelContent);
+    echo "{$modelName}.php created successfully in app/Models\n";
+} else {
+    echo "{$modelName}.php already exists. Skipping...\n";
 }
