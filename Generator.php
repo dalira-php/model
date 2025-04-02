@@ -1,7 +1,5 @@
 <?php
 
-require_once __DIR__ . '/DBConnection.php';
-
 if ($argc < 2) {
     echo "Usage: php Generator.php ModelName\n";
     exit(1);
@@ -18,14 +16,13 @@ use config\DBConnection;
 
 class {$modelName}
 {
-    private $db;
+    private \$db;
 
-    public function __construct(DBConnection $db)
+    public function __construct(DBConnection \$db)
     {
-        $this->db = $db->getConnection();
+        \$this->db = \$db->getConnection();
     }
 }
-<?php
 PHP;
 
 $path = getcwd() . '/app/Models/' . $modelName . '.php';
