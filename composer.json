@@ -1,21 +1,21 @@
 {
   "name": "dalira-php/model",
-  "description": "A custom model generator for Dalira PHP using Composer",
-  "license": "MIT",
-  "autoload": {
-    "psr-4": {
-      "ModelFacade\\": "./"
-    }
+  "description": "Model generator package",
+  "type": "library",
+  "require": {
+    "php": "^7.4|^8.0"
   },
   "scripts": {
     "post-install-cmd": [
-      "php vendor/dalira-php/model/generate.php"
+      "php Generator.php"
     ],
     "post-update-cmd": [
-      "php vendor/dalira-php/model/generate.php"
+      "php Generator.php"
     ]
   },
-  "require": {},
-  "minimum-stability": "dev",
-  "prefer-stable": true
+  "autoload": {
+    "psr-4": {
+      "DaliraPhp\\": "src/"
+    }
+  }
 }

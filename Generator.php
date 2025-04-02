@@ -1,7 +1,7 @@
 <?php
 
 if ($argc < 2) {
-    echo "Usage: php vendor/dalira-php/model/generate.php ModelName\n";
+    echo "Usage: php Generator.php ModelName\n";
     exit(1);
 }
 
