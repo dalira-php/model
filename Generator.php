@@ -5,48 +5,25 @@ if ($argc < 2) {
     exit(1);
 }
 
-$modelName = ucfirst($argv[1]); // Get the model name from command argument
+$modelName = ucfirst($argv[1]);
 
 $modelContent = <<<PHP
 <?php
 
-namespace App\Models;
+namespace app\Models;
 
-use DBConnection;
+use config\DBConnection;
 
-/**
- * {$modelName} Model
- */
-class {$modelName} extends DBConnection
+class {$modelName}
 {
-    public function create(\$data)
-    {
-        \$sql = \$this->connect()->prepare("INSERT INTO dalira_table (data) VALUES (?)");
-        \$sql->execute([\$data]);
-        return \$sql;
-    }
+    private $db;
 
-    public function read()
+    public function __construct(DBConnection $db)
     {
-        \$sql = \$this->connect()->prepare("SELECT * FROM dalira_table");
-        \$sql->execute();
-        return \$sql;
-    }
-
-    public function update(\$data, \$id)
-    {
-        \$sql = \$this->connect()->prepare("UPDATE dalira_table SET data = ? WHERE id = ?");
-        \$sql->execute([\$data, \$id]);
-        return \$sql;
-    }
-
-    public function delete(\$id)
-    {
-        \$sql = \$this->connect()->prepare("DELETE FROM dalira_table WHERE id = ?");
-        \$sql->execute([\$id]);
-        return \$sql;
+        $this->db = $db->getConnection();
     }
 }
+<?php
 PHP;
 
 $path = getcwd() . '/app/Models/' . $modelName . '.php';
