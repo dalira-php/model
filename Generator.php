@@ -15,7 +15,7 @@ namespace app\Models;
 use config\DBConnection;
 
 /**
- * Class PostsFacade
+ * Class $modelName
  * 
  * This class serves as a facade for handling the database interactions
  * related to the 'Posts' model. It abstracts the complexity of database
@@ -23,7 +23,7 @@ use config\DBConnection;
  * 
  * @package app\Models
  */
-class PostsFacade
+class $modelName
 {
     /**
      * @var \PDO
@@ -33,7 +33,7 @@ class PostsFacade
     private \$db;
 
     /**
-     * PostsFacade constructor.
+     * $modelName constructor.
      *
      * Initializes the database connection.
      * 
