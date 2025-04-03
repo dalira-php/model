@@ -1,7 +1,7 @@
 <?php
 
-if ($argc < 2) {
-    echo "Usage: php Generator.php ModelName\n";
+if ($argc < 2) {   
+    echo "Usage: composer create-model MODEL_NAME\n";
     exit(1);
 }
 
