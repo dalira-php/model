@@ -16,38 +16,39 @@ use config\DBConnection;
 
 /**
  * Class $modelName
- * 
- * This class serves as a facade for handling the database interactions
- * related to the 'Posts' model. It abstracts the complexity of database
- * queries, providing a simple interface for managing posts.
- * 
+ *
+ * This class provides an abstraction layer for interacting with the database 
+ * related to the '$modelName' model. It encapsulates database operations, 
+ * ensuring a clean and maintainable interface for managing data.
+ *
  * @package app\Models
  */
 class $modelName
 {
     /**
-     * @var \PDO
-     * 
-     * The database connection instance.
+     * @var \PDO Database connection instance.
      */
     private \$db;
 
     /**
-     * $modelName constructor.
+     * Constructor.
      *
      * Initializes the database connection.
-     * 
-     * @param DBConnection \$db The DBConnection instance to be used for
-     * establishing the database connection.
+     *
+     * @param DBConnection \$db An instance of DBConnection for establishing 
+     * the database connection.
      */
     public function __construct(DBConnection \$db)
     {
-        // Get the database connection from DBConnection class
+        // Retrieve the database connection from DBConnection
         \$this->db = \$db->getConnection();
     }
 
-    // Add your models below. Methods can be added to interact with posts data,
-    // such as creating, updating, deleting posts, etc.
+    /***********************************************************************
+     *                           MODEL METHODS                              *
+     * Add your custom methods below to interact with the database.         *
+     * Example: Creating, retrieving, updating, and deleting records.       *
+     ***********************************************************************/
 }
 PHP;
 
