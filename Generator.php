@@ -43,12 +43,8 @@ class $modelName
         // Retrieve the database connection from DBConnection
         \$this->db = \$db->getConnection();
     }
-
-    /***********************************************************************
-     *                           MODEL METHODS                              *
-     * Add your custom methods below to interact with the database.         *
-     * Example: Creating, retrieving, updating, and deleting records.       *
-     ***********************************************************************/
+    
+    // Add your custom methods below to interact with the database.
 }
 PHP;
 
