@@ -1,8 +1,9 @@
 {
-  "name": "dalira-php/model",
-  "description": "Model generator package",
-  "type": "library",
-  "require": {
-    "php": "^7.4|^8.0"
-  }
+	"name": "dalira-php/model",
+	"description": "Model generator package",
+	"type": "library",
+	"license": "MIT",
+	"require": {
+		"php": "^7.4|^8.0"
+	}
 }
