@@ -12,8 +12,8 @@ $modelContent = <<<PHP
 
 namespace app\Models;
 
-use PDO;
 use config\DBConnection;
+use PDO;
 
 class $modelName
 {
