@@ -14,7 +14,7 @@ namespace app\Models;
 
 use config\DBConnection;
 use PDO;
-use PDOException
+use PDOException;
 
 class $modelName
 {
