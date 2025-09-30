@@ -1,6 +1,6 @@
 <?php
 
-if ($argc < 2) {   
+if ($argc < 2) {
     echo "Usage: composer create-model MODEL_NAME\n";
     exit(1);
 }
